@@ -9,8 +9,8 @@ qid16 newqueue(void) {
   }
   nextqid += 2;
 
-  qentry *queuehdentry = &queuetab[queuehead(q)];
-  qentry *queuetlentry = &queuetab[queuetail(q)];
+  struct qentry *queuehdentry = &queuetab[queuehead(q)];
+  struct qentry *queuetlentry = &queuetab[queuetail(q)];
   /* head init */
   queuehdentry->qnext = queuetail(q);
   queuehdentry->qprev = EMPTY;
